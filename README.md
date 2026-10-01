@@ -25,10 +25,8 @@ then reuses the selected target through the original solver.
 
 ```mermaid
 flowchart LR
-    A[Exact DiT call] --> B[Encode candidate cache targets]
-    B --> C[Calibrate against uncached outputs]
-    C --> D[Select a target with a risk-gap check]
-    D --> E[Reuse at scheduled steps through the original solver]
+    A[Exact DiT call and target encoding] --> B[Decoder-aware calibration and risk comparison]
+    B --> C[Target selection and solver reuse]
 ```
 
 Calibration scores the mean RGB reconstruction error after image decoding.
